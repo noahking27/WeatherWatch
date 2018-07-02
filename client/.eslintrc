@@ -1,0 +1,71 @@
+{
+  "extends": [
+    "airbnb",
+    "plugin:react/recommended",
+  ],
+
+  "env": {
+    "browser": true,
+  },
+
+  "plugins": [
+    "import",
+    "json",
+    "jsx-a11y",
+  ],
+
+  "settings": {
+    "react": {
+      "version": "16.0",
+    },
+  },
+
+   "parser": "babel-eslint",
+   "parserOptions": {
+        "ecmaVersion": 6,
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "jsx": true,
+            "modules": true,
+            "experimentalObjectRestSpread": true
+        }
+   },
+
+  "rules": {
+    "class-methods-use-this": "error",
+    "constructor-super": "error",
+    "function-paren-newline": "off",
+    "import/extensions": ["warn", { "js": "never" }],
+    "import/no-extraneous-dependencies": ["error", {"devDependencies": false, "optionalDependencies": false, "peerDependencies": false}],
+    "import/prefer-default-export": "off",
+    "jsx-a11y/anchor-is-valid": [ "error", {
+        "components": [ "Link" ],
+        "specialLink": [ "to", "hrefLeft", "hrefRight" ],
+        "aspects": [ "noHref", "invalidHref", "preferButton" ]
+    }],
+    "jsx-a11y/click-events-have-key-events": "off",
+    "jsx-a11y/no-static-element-interactions": "off",
+    "max-nested-callbacks": ["error", { "max": 5 }],
+    "no-confusing-arrow": ["error", {"allowParens": true}],
+    "no-lonely-if": "error",
+    "no-param-reassign": "off",
+    "no-plusplus": "off",
+    "no-this-before-super": "error",
+    "no-underscore-dangle": "off",
+    "no-unexpected-multiline": "error",
+    "no-warning-comments": ["warn", { "terms": ["todo", "fixme"], "location": "start" }],
+    "object-curly-newline": "off",
+    "prefer-destructuring": ["error", {"array": false, "object": true}, {"enforceForRenamedProperties": false}],
+    "prefer-spread": "error",
+    "react/forbid-prop-types": ["error", { "forbid": ['any', 'array'] }],
+    "react/jsx-first-prop-new-line": "off",
+    "react/prefer-stateless-function": "warn",
+    "react/sort-comp": ["error", order: [
+      'static-methods',
+      'lifecycle',
+      'everything-else',
+      'rendering',
+    ]],
+    "semi": ["warn", "never"]
+  }
+}
